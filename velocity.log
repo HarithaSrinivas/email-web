@@ -1,0 +1,547 @@
+2018-02-18 21:18:05,255 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 21:18:05,259 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 21:18:05,261 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 21:18:05,265 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 21:18:05,268 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 21:18:05,271 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 21:18:05,275 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 21:18:05,360 - Created '20' parsers.
+2018-02-18 21:18:05,374 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 21:18:05,376 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 21:18:05,376 - Velocimacro : Default library not found.
+2018-02-18 21:18:05,376 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 21:18:05,377 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 21:18:05,377 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 21:18:05,377 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 21:18:19,120 - Parser Exception: emailtemplate.vm
+org.apache.velocity.runtime.parser.ParseException: Encountered "<EOF>" at line 40, column 7.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "##" ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    "*#" ...
+    "*#" ...
+    "]]#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    <IF_DIRECTIVE> ...
+    <INTEGER_LITERAL> ...
+    <FLOATING_POINT_LITERAL> ...
+    <WORD> ...
+    <BRACKETED_WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    <EMPTY_INDEX> ...
+    
+	at org.apache.velocity.runtime.parser.Parser.generateParseException(Parser.java:3679)
+	at org.apache.velocity.runtime.parser.Parser.jj_consume_token(Parser.java:3558)
+	at org.apache.velocity.runtime.parser.Parser.IfStatement(Parser.java:1740)
+	at org.apache.velocity.runtime.parser.Parser.Statement(Parser.java:352)
+	at org.apache.velocity.runtime.parser.Parser.ElseStatement(Parser.java:1804)
+	at org.apache.velocity.runtime.parser.Parser.IfStatement(Parser.java:1734)
+	at org.apache.velocity.runtime.parser.Parser.Statement(Parser.java:352)
+	at org.apache.velocity.runtime.parser.Parser.process(Parser.java:317)
+	at org.apache.velocity.runtime.parser.Parser.parse(Parser.java:117)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:1226)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:1181)
+	at org.apache.velocity.Template.process(Template.java:134)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:343)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:320)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplate(VelocityEngineUtils.java:55)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplateIntoString(VelocityEngineUtils.java:94)
+	at com.srirama.utility.SendMail.sendEmail(SendMail.java:68)
+	at com.srirama.controller.HelloWorldController.sayHello(HelloWorldController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-02-18 21:18:19,132 - ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Encountered "<EOF>" at emailtemplate.vm[line 40, column 7]
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "##" ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    "*#" ...
+    "*#" ...
+    "]]#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    <IF_DIRECTIVE> ...
+    <INTEGER_LITERAL> ...
+    <FLOATING_POINT_LITERAL> ...
+    <WORD> ...
+    <BRACKETED_WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    <EMPTY_INDEX> ...
+    
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:343)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:320)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplate(VelocityEngineUtils.java:55)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplateIntoString(VelocityEngineUtils.java:94)
+	at com.srirama.utility.SendMail.sendEmail(SendMail.java:68)
+	at com.srirama.controller.HelloWorldController.sayHello(HelloWorldController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-02-18 21:22:05,165 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 21:22:05,166 - Initializing Velocity, Calling init()...
+2018-02-18 21:22:05,167 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 21:22:05,167 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 21:22:05,167 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 21:22:05,167 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 21:22:05,167 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:22:05,167 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:22:05,177 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:22:05,226 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 21:22:05,230 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 21:22:05,232 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 21:22:05,234 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 21:22:05,236 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 21:22:05,237 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 21:22:05,241 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 21:22:05,246 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 21:22:05,250 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 21:22:05,254 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 21:22:05,380 - Created '20' parsers.
+2018-02-18 21:22:05,399 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 21:22:05,401 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 21:22:05,402 - Velocimacro : Default library not found.
+2018-02-18 21:22:05,402 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 21:22:05,402 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 21:22:05,402 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 21:22:05,402 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 21:22:18,384 - Parser Exception: emailtemplate.vm
+org.apache.velocity.runtime.parser.ParseException: Encountered "<EOF>" at line 39, column 7.
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "##" ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    "*#" ...
+    "*#" ...
+    "]]#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    <IF_DIRECTIVE> ...
+    <INTEGER_LITERAL> ...
+    <FLOATING_POINT_LITERAL> ...
+    <WORD> ...
+    <BRACKETED_WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    <EMPTY_INDEX> ...
+    
+	at org.apache.velocity.runtime.parser.Parser.generateParseException(Parser.java:3679)
+	at org.apache.velocity.runtime.parser.Parser.jj_consume_token(Parser.java:3558)
+	at org.apache.velocity.runtime.parser.Parser.IfStatement(Parser.java:1740)
+	at org.apache.velocity.runtime.parser.Parser.Statement(Parser.java:352)
+	at org.apache.velocity.runtime.parser.Parser.IfStatement(Parser.java:1692)
+	at org.apache.velocity.runtime.parser.Parser.Statement(Parser.java:352)
+	at org.apache.velocity.runtime.parser.Parser.process(Parser.java:317)
+	at org.apache.velocity.runtime.parser.Parser.parse(Parser.java:117)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:1226)
+	at org.apache.velocity.runtime.RuntimeInstance.parse(RuntimeInstance.java:1181)
+	at org.apache.velocity.Template.process(Template.java:134)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:343)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:320)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplate(VelocityEngineUtils.java:55)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplateIntoString(VelocityEngineUtils.java:94)
+	at com.srirama.utility.SendMail.sendEmail(SendMail.java:68)
+	at com.srirama.controller.HelloWorldController.sayHello(HelloWorldController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-02-18 21:22:18,396 - ResourceManager.getResource() parse exception
+org.apache.velocity.exception.ParseErrorException: Encountered "<EOF>" at emailtemplate.vm[line 39, column 7]
+Was expecting one of:
+    "(" ...
+    <RPAREN> ...
+    <ESCAPE_DIRECTIVE> ...
+    <SET_DIRECTIVE> ...
+    "##" ...
+    "\\\\" ...
+    "\\" ...
+    <TEXT> ...
+    "*#" ...
+    "*#" ...
+    "]]#" ...
+    <STRING_LITERAL> ...
+    <END> ...
+    <IF_DIRECTIVE> ...
+    <INTEGER_LITERAL> ...
+    <FLOATING_POINT_LITERAL> ...
+    <WORD> ...
+    <BRACKETED_WORD> ...
+    <IDENTIFIER> ...
+    <DOT> ...
+    "{" ...
+    "}" ...
+    <EMPTY_INDEX> ...
+    
+	at org.apache.velocity.Template.process(Template.java:151)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.loadResource(ResourceManagerImpl.java:437)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.getResource(ResourceManagerImpl.java:352)
+	at org.apache.velocity.runtime.RuntimeInstance.getTemplate(RuntimeInstance.java:1533)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:343)
+	at org.apache.velocity.app.VelocityEngine.mergeTemplate(VelocityEngine.java:320)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplate(VelocityEngineUtils.java:55)
+	at org.springframework.ui.velocity.VelocityEngineUtils.mergeTemplateIntoString(VelocityEngineUtils.java:94)
+	at com.srirama.utility.SendMail.sendEmail(SendMail.java:68)
+	at com.srirama.controller.HelloWorldController.sayHello(HelloWorldController.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:116)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:897)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:621)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:100)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:953)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1041)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:603)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2018-02-18 21:30:38,925 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 21:30:38,926 - Initializing Velocity, Calling init()...
+2018-02-18 21:30:38,927 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 21:30:38,927 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 21:30:38,927 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 21:30:38,927 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 21:30:38,927 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:30:38,927 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:30:38,938 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:30:38,988 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 21:30:38,992 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 21:30:38,996 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 21:30:38,998 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 21:30:39,001 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 21:30:39,003 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 21:30:39,007 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 21:30:39,011 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 21:30:39,015 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 21:30:39,019 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 21:30:39,144 - Created '20' parsers.
+2018-02-18 21:30:39,162 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 21:30:39,164 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 21:30:39,164 - Velocimacro : Default library not found.
+2018-02-18 21:30:39,164 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 21:30:39,164 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 21:30:39,165 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 21:30:39,165 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 21:30:47,448 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:30:47,448 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:31:04,661 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:31:04,663 - Null reference [template 'emailtemplate.vm', line 19, column 25] : ${Spouse} cannot be resolved.
+2018-02-18 21:31:06,616 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:31:06,617 - Null reference [template 'emailtemplate.vm', line 19, column 25] : ${Spouse} cannot be resolved.
+2018-02-18 21:34:30,854 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:35:54,128 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:35:54,129 - Null reference [template 'emailtemplate.vm', line 19, column 25] : ${Spouse} cannot be resolved.
+2018-02-18 21:43:40,589 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 21:43:40,590 - Initializing Velocity, Calling init()...
+2018-02-18 21:43:40,591 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 21:43:40,591 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 21:43:40,591 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 21:43:40,591 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 21:43:40,591 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:43:40,591 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:43:40,602 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:43:40,636 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 21:43:40,640 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 21:43:40,643 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 21:43:40,645 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 21:43:40,647 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 21:43:40,648 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 21:43:40,651 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 21:43:40,655 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 21:43:40,658 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 21:43:40,660 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 21:43:40,750 - Created '20' parsers.
+2018-02-18 21:43:40,764 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 21:43:40,766 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 21:43:40,766 - Velocimacro : Default library not found.
+2018-02-18 21:43:40,766 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 21:43:40,766 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 21:43:40,766 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 21:43:40,767 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 21:45:15,701 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:45:32,663 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:55:25,338 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 21:55:25,356 - Initializing Velocity, Calling init()...
+2018-02-18 21:55:25,356 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 21:55:25,356 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 21:55:25,357 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 21:55:25,357 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 21:55:25,357 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:55:25,357 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 21:55:25,368 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 21:55:25,488 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 21:55:25,509 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 21:55:25,514 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 21:55:25,547 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 21:55:25,553 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 21:55:25,555 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 21:55:25,560 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 21:55:25,576 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 21:55:25,581 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 21:55:25,616 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 21:55:25,868 - Created '20' parsers.
+2018-02-18 21:55:25,914 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 21:55:25,916 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 21:55:25,917 - Velocimacro : Default library not found.
+2018-02-18 21:55:25,917 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 21:55:25,917 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 21:55:25,917 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 21:55:25,917 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 22:03:44,053 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:04:04,105 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:04:04,110 - Null reference [template 'emailtemplate.vm', line 17, column 25] : ${Spouse} cannot be resolved.
+2018-02-18 22:17:08,175 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 22:17:08,176 - Initializing Velocity, Calling init()...
+2018-02-18 22:17:08,176 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 22:17:08,176 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 22:17:08,176 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 22:17:08,177 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 22:17:08,177 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:17:08,177 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:17:08,184 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:17:08,221 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 22:17:08,224 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 22:17:08,227 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 22:17:08,229 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 22:17:08,231 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 22:17:08,232 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 22:17:08,234 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 22:17:08,237 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 22:17:08,241 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 22:17:08,243 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 22:17:08,319 - Created '20' parsers.
+2018-02-18 22:17:08,331 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 22:17:08,333 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 22:17:08,333 - Velocimacro : Default library not found.
+2018-02-18 22:17:08,333 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 22:17:08,333 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 22:17:08,333 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 22:17:08,334 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 22:17:45,912 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:18:03,690 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:18:03,693 - Null reference [template 'emailtemplate.vm', line 17, column 25] : ${Spouse} cannot be resolved.
+2018-02-18 22:18:17,588 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:30:18,505 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 22:30:18,506 - Initializing Velocity, Calling init()...
+2018-02-18 22:30:18,506 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 22:30:18,506 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 22:30:18,506 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 22:30:18,506 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 22:30:18,506 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:30:18,506 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:30:18,513 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:30:18,546 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 22:30:18,549 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 22:30:18,551 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 22:30:18,553 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 22:30:18,555 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 22:30:18,556 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 22:30:18,558 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 22:30:18,562 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 22:30:18,564 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 22:30:18,567 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 22:30:18,643 - Created '20' parsers.
+2018-02-18 22:30:18,656 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 22:30:18,658 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 22:30:18,658 - Velocimacro : Default library not found.
+2018-02-18 22:30:18,658 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 22:30:18,658 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 22:30:18,658 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 22:30:18,658 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 22:31:01,242 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:31:18,515 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:31:33,838 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:37:02,321 - Log4JLogChute initialized using file 'velocity.log'
+2018-02-18 22:37:02,322 - Initializing Velocity, Calling init()...
+2018-02-18 22:37:02,322 - Starting Apache Velocity v1.7 (compiled: 2010-11-19 12:14:37)
+2018-02-18 22:37:02,322 - Default Properties File: org\apache\velocity\runtime\defaults\velocity.properties
+2018-02-18 22:37:02,322 - Trying to use logger class org.apache.velocity.runtime.log.AvalonLogChute
+2018-02-18 22:37:02,322 - Target log system for org.apache.velocity.runtime.log.AvalonLogChute is not available (java.lang.NoClassDefFoundError: org/apache/log/format/Formatter).  Falling back to next log system...
+2018-02-18 22:37:02,323 - Trying to use logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:37:02,323 - Using logger class org.apache.velocity.runtime.log.Log4JLogChute
+2018-02-18 22:37:02,330 - ResourceLoader instantiated: org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:37:02,361 - ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl) with class java.util.Collections$SynchronizedMap cache map.
+2018-02-18 22:37:02,364 - Loaded System Directive: org.apache.velocity.runtime.directive.Stop
+2018-02-18 22:37:02,367 - Loaded System Directive: org.apache.velocity.runtime.directive.Define
+2018-02-18 22:37:02,368 - Loaded System Directive: org.apache.velocity.runtime.directive.Break
+2018-02-18 22:37:02,370 - Loaded System Directive: org.apache.velocity.runtime.directive.Evaluate
+2018-02-18 22:37:02,372 - Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+2018-02-18 22:37:02,375 - Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+2018-02-18 22:37:02,379 - Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+2018-02-18 22:37:02,384 - Loaded System Directive: org.apache.velocity.runtime.directive.Include
+2018-02-18 22:37:02,387 - Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+2018-02-18 22:37:02,514 - Created '20' parsers.
+2018-02-18 22:37:02,532 - Velocimacro : "velocimacro.library" is not set.  Trying default library: VM_global_library.vm
+2018-02-18 22:37:02,534 - Could not load resource 'VM_global_library.vm' from ResourceLoader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader: ClasspathResourceLoader Error: cannot find resource VM_global_library.vm
+2018-02-18 22:37:02,534 - Velocimacro : Default library not found.
+2018-02-18 22:37:02,534 - Velocimacro : allowInline = true : VMs can be defined inline in templates
+2018-02-18 22:37:02,534 - Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+2018-02-18 22:37:02,534 - Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+2018-02-18 22:37:02,535 - Velocimacro : autoload off : VM system will not automatically reload global library macros
+2018-02-18 22:37:21,437 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:37:38,115 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:37:51,421 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:38:03,829 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:38:19,276 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:38:37,016 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:38:49,783 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:39:03,583 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2018-02-18 22:39:17,302 - ResourceManager : found emailtemplate.vm with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader

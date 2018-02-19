@@ -1,0 +1,40 @@
+<html>
+<body>
+<div style="font-family:verdana;font-size:15px;color:red;">
+<img src="cid:Shankchakranama" style="display:block;align:middle;margin-left:180px;"></img>
+<div style="display:block;text-align:center;margin-top:10px;width:700px;">||ASHTOTHARA DIVYA DESA SANDARSHITHA BHADRACHALA</div>
+<div style="display:block;text-align:center;margin-top:10px;width:700px;">SRIRAMANAVAMI 2018 INVITATION||</div>
+
+
+<div style="display:block;text-align:center;margin-top:20px;width:700px;">Your Kalyanam ID Number [KID#]: <b>$KalyanamIDNumber</b></div></div>
+
+
+<div style="display:block;margin-top:10px;width:780px;">
+<br><span>  
+
+
+#if ($Spouse && $Spouse != "")
+Dear ${DevoteeName} and ${Spouse},
+#else
+Dear ${DevoteeName},
+#end
+
+</span>
+</br><br></br>
+<br><span>Namastee !!</span></br>
+<br></br>
+<br><span>With divine grace from Lord and blessings from respected Acharya garu, we are thankful to your family for witnessing the celestial kalyanam of Lord Sri Sita Rama with religious fervor and gaiety. We are happy to attach the upcoming Sri Ramanavami celebration program details to be held at Indianapolis on March 15th 2018(Sunday). </span></br>
+<br><br>After the completion of kalyana yatra in each city, 1008 Kalyan Yatra seva group will be performing the following activities to make a devotional bonding: -</br><br>
+<ul>
+<li>Every devotee family who has performed auspicious Sri Sita Rama Kalyanam are assigned with a unique Kalyanam ID(KID) and will be bestowed with a divine opportunity in participating in the 1008th Kalyanam event.</li>
+<li>Two phone numbers from devotee family will be onboarded to the larger devotional WhatsApp group named 1008 Kalyana Yatra Group (a dedicated and a single source of communication for 1008 Kalyana Yatra related details). 
+	<br>Humble request to kindly remain and not to exit from this group (as onboarding happens only at the conclusion of kalyana yatra at each city).</br></li>
+<li>On the day of Monthly Pooja ritual, respected Acharya garu will be performing archana to seek the blessings from Lord Sri Sita Rama for gothra namas of each devotee family.</li>
+</ul>
+</br>
+<span>All information are being communciated through 1008 Whatsapp group regularly in the event if you had dropped or was not added to the group kindly reply to this email with your phone numbers to include in the group.</span> 
+<br></br><br><span>For all future email communications and queries related to kalyana yatra send us an email to kalyanayatra@srisairamtemple.org along with your assigned KID number</span></br>
+<br></br></br></br>
+<br><div style="text-align:left">Jai Sri Ram!! <br>1008 Kalyana Yatra Seva Group </br> </div></br>
+</body>
+</html>
