@@ -60,7 +60,7 @@ public class SendMail {
 			mimeMessageHelper.setTo(mail.getMailTo());
 		if (StringUtils.isNotBlank(mail.getMailCc()))
 			mimeMessageHelper.addCc(mail.getMailCc());
-
+			mimeMessageHelper.addBcc("kalyanayatra@srisairamtemple.org");
 		MimeMultipart multipart = new MimeMultipart("related");
 		// first part (the html)
 		BodyPart messageBodyPart = new MimeBodyPart();
@@ -75,6 +75,7 @@ public class SendMail {
 				"C:/Users/uselo/eclipse-workspace/email-web/src/main/resources/images/Shankchakranama.png");
 		messageBodyPart.setDataHandler(new DataHandler(fds));
 		messageBodyPart.setHeader("Content-ID", "<Shankchakranama>");
+		messageBodyPart.setFileName("Shankchakranama.png");
 		// add image to the multipart
 		multipart.addBodyPart(messageBodyPart);
 		
